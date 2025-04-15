@@ -5,6 +5,22 @@
     {
       "AbsoluteMoniker": "D:0:0:{68649C06-AF22-4CEB-B3BA-30EC359BE967}|DungeonMan\\DungeonMan.csproj|c:\\users\\thsus\\onedrive\\\uBB38\uC11C\\github\\dungeonman\\dungeonman\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{68649C06-AF22-4CEB-B3BA-30EC359BE967}|DungeonMan\\DungeonMan.csproj|solutionrelative:dungeonman\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68649C06-AF22-4CEB-B3BA-30EC359BE967}|DungeonMan\\DungeonMan.csproj|c:\\users\\thsus\\onedrive\\\uBB38\uC11C\\github\\dungeonman\\dungeonman\\shop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68649C06-AF22-4CEB-B3BA-30EC359BE967}|DungeonMan\\DungeonMan.csproj|solutionrelative:dungeonman\\shop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68649C06-AF22-4CEB-B3BA-30EC359BE967}|DungeonMan\\DungeonMan.csproj|c:\\users\\thsus\\onedrive\\\uBB38\uC11C\\github\\dungeonman\\dungeonman\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68649C06-AF22-4CEB-B3BA-30EC359BE967}|DungeonMan\\DungeonMan.csproj|solutionrelative:dungeonman\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68649C06-AF22-4CEB-B3BA-30EC359BE967}|DungeonMan\\DungeonMan.csproj|c:\\users\\thsus\\onedrive\\\uBB38\uC11C\\github\\dungeonman\\dungeonman\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68649C06-AF22-4CEB-B3BA-30EC359BE967}|DungeonMan\\DungeonMan.csproj|solutionrelative:dungeonman\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68649C06-AF22-4CEB-B3BA-30EC359BE967}|DungeonMan\\DungeonMan.csproj|c:\\users\\thsus\\onedrive\\\uBB38\uC11C\\github\\dungeonman\\dungeonman\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68649C06-AF22-4CEB-B3BA-30EC359BE967}|DungeonMan\\DungeonMan.csproj|solutionrelative:dungeonman\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,8 +30,60 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Item.cs",
+              "DocumentMoniker": "C:\\Users\\thsus\\OneDrive\\\uBB38\uC11C\\GitHub\\DungeonMan\\DungeonMan\\Item.cs",
+              "RelativeDocumentMoniker": "DungeonMan\\Item.cs",
+              "ToolTip": "C:\\Users\\thsus\\OneDrive\\\uBB38\uC11C\\GitHub\\DungeonMan\\DungeonMan\\Item.cs",
+              "RelativeToolTip": "DungeonMan\\Item.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T11:39:19.578Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Inventory.cs",
+              "DocumentMoniker": "C:\\Users\\thsus\\OneDrive\\\uBB38\uC11C\\GitHub\\DungeonMan\\DungeonMan\\Inventory.cs",
+              "RelativeDocumentMoniker": "DungeonMan\\Inventory.cs",
+              "ToolTip": "C:\\Users\\thsus\\OneDrive\\\uBB38\uC11C\\GitHub\\DungeonMan\\DungeonMan\\Inventory.cs",
+              "RelativeToolTip": "DungeonMan\\Inventory.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T11:38:36.977Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Character.cs",
+              "DocumentMoniker": "C:\\Users\\thsus\\OneDrive\\\uBB38\uC11C\\GitHub\\DungeonMan\\DungeonMan\\Character.cs",
+              "RelativeDocumentMoniker": "DungeonMan\\Character.cs",
+              "ToolTip": "C:\\Users\\thsus\\OneDrive\\\uBB38\uC11C\\GitHub\\DungeonMan\\DungeonMan\\Character.cs",
+              "RelativeToolTip": "DungeonMan\\Character.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T11:37:56.065Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Shop.cs",
+              "DocumentMoniker": "C:\\Users\\thsus\\OneDrive\\\uBB38\uC11C\\GitHub\\DungeonMan\\DungeonMan\\Shop.cs",
+              "RelativeDocumentMoniker": "DungeonMan\\Shop.cs",
+              "ToolTip": "C:\\Users\\thsus\\OneDrive\\\uBB38\uC11C\\GitHub\\DungeonMan\\DungeonMan\\Shop.cs",
+              "RelativeToolTip": "DungeonMan\\Shop.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T11:37:00.702Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -24,7 +92,7 @@
               "RelativeDocumentMoniker": "DungeonMan\\Program.cs",
               "ToolTip": "C:\\Users\\thsus\\OneDrive\\\uBB38\uC11C\\GitHub\\DungeonMan\\DungeonMan\\Program.cs",
               "RelativeToolTip": "DungeonMan\\Program.cs",
-              "ViewState": "AQIAACoAAAAAAAAAAAAIwEoAAAAoAAAA",
+              "ViewState": "AQIAACYAAAAAAAAAAAAQwC8AAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-14T08:23:43.315Z",
               "EditorCaption": ""
