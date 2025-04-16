@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DungeonMan.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,18 +17,21 @@ namespace DungeonMan.GameSystem
         public int Gold { get; set; }
         public string Job { get; set; }
 
+        public Item EquippedWeapon { get; set; } // 무기
+        public Item EquippedArmor { get; set; }  // 방어구
+
         public Character(string name, string job)
         {
             Name = name;
             Job = job;
             Level = 1;
-            Gold = 1000;
+            Gold = 10500;
 
             if (job == "전사")
             {
-                AttackPower = 15;
-                DefensePower = 10;
-                Hp = 20;
+                AttackPower = 10;
+                DefensePower = 15;
+                Hp = 100;
             }
             else if (job == "도적")
             {
@@ -44,8 +48,21 @@ namespace DungeonMan.GameSystem
             Console.WriteLine("이름 : " + Name);
             Console.WriteLine("Lv. " + Level);
             Console.WriteLine("Chad. " + Job);
-            Console.WriteLine("공격력 : " + AttackPower);
-            Console.WriteLine("방어력 : " + DefensePower);
+            string attackInfo = AttackPower.ToString();
+            if (EquippedWeapon != null)
+            {
+                int baseAttack = AttackPower - EquippedWeapon.Power;
+                attackInfo = $"{AttackPower} ({EquippedWeapon.Name} +{EquippedWeapon.Power})";
+            }
+
+            string defenseInfo = DefensePower.ToString();
+            if (EquippedArmor != null)
+            {
+                int baseDefense = DefensePower - EquippedArmor.Power;
+                defenseInfo = $"{DefensePower} ({EquippedArmor.Name} +{EquippedArmor.Power})";
+            }
+            Console.WriteLine("공격력 : " + attackInfo);
+            Console.WriteLine("방어력 : " + defenseInfo);
             Console.WriteLine("체력 : " + Hp);
             Console.WriteLine("골드 : " + Gold);
             Console.WriteLine("");
@@ -53,7 +70,23 @@ namespace DungeonMan.GameSystem
             Console.WriteLine("");
             Console.WriteLine("아무 버튼이나 눌러 나가기."); Console.ReadLine();
 
-            Program.Lobby();
+            Lobby.InLobby();
         }
+
+        public void Equip(Item item)
+        {
+            if (item.Type == ItemType.무기)
+            {
+                EquippedWeapon = item;
+                AttackPower += item.Power;
+            }
+            else if (item.Type == ItemType.방어구)
+            {
+                EquippedArmor = item;
+                DefensePower += item.Power;
+            }
+        }
+
+
     }
 }
