@@ -11,8 +11,9 @@ namespace DungeonMan
         public static Inventory inventory = new Inventory();
         public static Shop shop = new Shop(inventory);
         public static GameLogic gameLogic = new GameLogic();
+        public static Dungeon dungeon = new Dungeon();
 
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             gameLogic.StartGame();
         }

@@ -13,6 +13,7 @@ namespace DungeonMan.GameSystem
         public static Character chara;
         public static string nickname;
         public static string savedJob;
+        public static Job job;
         public void StartGame()
         {
             Console.WriteLine("- DungeonMan에 오신 것을 환영합니다.");
@@ -23,7 +24,7 @@ namespace DungeonMan.GameSystem
         public static void CharacterNickname()
         {
             Console.WriteLine("");
-            Console.Write("당신의 이름을 알려주세요 => ");
+            Console.Write("당신의 이름은 무엇인가요? =>  ");
             nickname = Console.ReadLine();
             Console.WriteLine($"[{nickname}] ← 이 이름이 맞으신가요?");
             Console.WriteLine("(1)예 (2)아니오");
@@ -52,60 +53,76 @@ namespace DungeonMan.GameSystem
             Console.WriteLine("- 직업을 선택해주세요.");
             Console.WriteLine("1. 전사");
             Console.WriteLine("2. 도적");
-            int jobNum = int.Parse(Console.ReadLine());
-            switch (jobNum)
+            Console.Write("\n당신이 걸어갈 길은 무엇인가요? =>  ");
+            if (int.TryParse(Console.ReadLine(), out int selectedJob) && Enum.IsDefined(typeof(Job), selectedJob))
             {
-                case 1:
-                    Console.Clear();
-                    Console.WriteLine("[전사] 직업을 택하시겠습니까?");
-                    Console.Write("(1)예 (2)아니오 ");
-                    int selectWarrior = int.Parse(Console.ReadLine());
-                    if (selectWarrior == 1)
-                    {
-                        savedJob = "전사";
-                        chara = new Character(nickname, savedJob);
-                        Console.WriteLine("[전사]가 되었습니다. 아무 키를 눌러 로비로 이동해주세요."); Console.ReadLine();
-                        Lobby.InLobby();
-                    }
-                    else if (selectWarrior == 2)
-                    {
-                        SelectJob();
-                    }
-                    else
-                    {
+
+                Job job = (Job)selectedJob;
+                switch (job)
+                {
+                    case Job.전사:
+                        Console.Clear();
+                        Console.WriteLine("<거대한 대검을 손에 쥔 호쾌한 싸움꾼>\n\n[전사] 직업을 택하시겠습니까?\n\n");
+                        Console.Write("(1)예 (2)아니오 ");
+                        Console.Write("\n결정 =>  ");
+                        int i = int.Parse(Console.ReadLine());
+                        if (i == 1)
+                        {
+                            savedJob = "전사";
+                            chara = new Character(nickname, savedJob);
+                            Console.Clear();
+                            Console.WriteLine("당신의 운명이 결정되는 중입니다...");
+                            Thread.Sleep(2000);
+                            Console.Clear();
+                            Console.WriteLine("[전사] 전직이 완료되었습니다. 행운을 빕니다...\n\n아무 키를 눌러 로비로 이동해주세요."); Console.ReadLine();
+                            Lobby.InLobby();
+                        }
+                        else if (i == 2)
+                        {
+                            SelectJob();
+                        }
+                        else
+                        {
+                            Console.WriteLine("- 올바른 키를 눌러주세요."); Console.ReadLine();
+                            SelectJob();
+                        }
+                        break;
+                    case Job.도적:
+                        Console.Clear();
+                        Console.WriteLine("<어둠 속의 은밀한 암살자>\n\n[도적] 직업을 택하시겠습니까?\n\n");
+                        Console.Write("(1)예 (2)아니오 ");
+                        Console.Write("\n결정 =>  ");
+                        int j = int.Parse(Console.ReadLine());
+                        if (j == 1)
+                        {
+                            savedJob = "도적";
+                            GameLogic.chara = new Character(nickname, savedJob);
+                            Console.Clear();
+                            Console.WriteLine("당신의 운명이 결정되는 중입니다...");
+                            Thread.Sleep(2000);
+                            Console.Clear();
+                            Console.WriteLine("[도적] 전직이 완료되었습니다. 행운을 빕니다...\n\n아무 키를 눌러 로비로 이동해주세요."); Console.ReadLine();
+                            Lobby.InLobby();
+                        }
+                        else if (j == 2)
+                        {
+                            SelectJob();
+                        }
+                        else
+                        {
+                            Console.WriteLine("- 올바른 키를 눌러주세요."); Console.ReadLine();
+                            SelectJob();
+                        }
+                        break;
+                    default:
                         Console.WriteLine("- 올바른 키를 눌러주세요."); Console.ReadLine();
                         SelectJob();
-                    }
-                    break;
-                case 2:
-                    Console.Clear();
-                    Console.WriteLine("[도적] 직업을 택하시겠습니까?");
-                    Console.Write("(1)예 (2)아니오 ");
-                    int selectThief = int.Parse(Console.ReadLine());
-                    if (selectThief == 1)
-                    {
-                        savedJob = "도적";
-                        GameLogic.chara = new Character(nickname, savedJob);
-                        Console.WriteLine("[도적]이 되었습니다. 아무 키를 눌러 로비로 이동해주세요."); Console.ReadLine();
-                        Lobby.InLobby();
-                    }
-                    else if (selectThief == 2)
-                    {
-                        SelectJob();
-                    }
-                    else
-                    {
-                        Console.WriteLine("- 올바른 키를 눌러주세요."); Console.ReadLine();
-                        SelectJob();
-                    }
-                    break;
-                default:
-                    Console.WriteLine("- 올바른 키를 눌러주세요."); Console.ReadLine();
-                    SelectJob();
-                    break;
+                        break;
+                }
             }
 
         }
+      public enum Job { 전사 = 1, 도적 }
     }
 
 }

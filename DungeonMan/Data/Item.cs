@@ -31,12 +31,5 @@ namespace DungeonMan.Data
             Gold = gold;
             AvailableJob = availablejob;
         }
-
-        public void ClearExceptGold()
-        {
-            Explain = "";
-            AvailableJob = "";
-            Gold = "구매 완료";
-        }
     }
 }

@@ -18,6 +18,7 @@ namespace DungeonMan.GameSystem
             Console.WriteLine("(1) 현재 스테이터스 확인");
             Console.WriteLine("(2) 현재 인벤토리 확인");
             Console.WriteLine("(3) 상점");
+            Console.WriteLine("(4) 던전 입장");
 
             Console.WriteLine("");
             Console.Write("원하시는 행동을 선택해주세요. : ");
@@ -32,6 +33,9 @@ namespace DungeonMan.GameSystem
                     break;
                 case 3:
                     Shop();
+                    break;
+                case 4:
+                    Dungeon();
                     break;
                 default:
                     Console.WriteLine("잘못된 입력입니다. 다시 선택해주세요."); Console.ReadLine();
@@ -53,6 +57,11 @@ namespace DungeonMan.GameSystem
         public static void Shop()
         {
             Program.shop.ShowShop();
+        }
+
+        public static void Dungeon()
+        {
+            Program.dungeon.IntoDungeon();
         }
     }
 }

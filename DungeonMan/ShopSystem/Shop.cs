@@ -75,38 +75,44 @@ namespace DungeonMan.ShopSystem
                 Console.WriteLine($"현재 골드 : {GameLogic.chara.Gold}");
                 Console.WriteLine("\n방향키 ← →로 상점 페이지 이동");
                 Console.WriteLine("1. 구매하기");
+                Console.WriteLine("2. 판매하기");
                 Console.WriteLine("0. 나가기");
+                Console.WriteLine("\n 숫자 입력 =>");
 
-                ConsoleKeyInfo key = Console.ReadKey(true);
+                var key = Console.ReadKey(intercept: true); // 입력 표시 없이 키 읽음
 
-                // 방향키 처리
                 if (key.Key == ConsoleKey.RightArrow && page == 1)
                 {
                     page = 2;
-                    continue;
                 }
                 else if (key.Key == ConsoleKey.LeftArrow && page == 2)
                 {
                     page = 1;
-                    continue;
                 }
                 else if (char.IsDigit(key.KeyChar))
                 {
-                    int choice = int.Parse(key.KeyChar.ToString());
+                    Console.Write(key.KeyChar); // 입력된 숫자 표시
+                    string remainingInput = Console.ReadLine(); // 나머지 숫자와 엔터 기다림
+                    string fullInput = key.KeyChar + remainingInput;
 
-                    switch (choice)
+                    if (int.TryParse(fullInput, out int choice))
                     {
-                        case 1:
-                            if (page == 1)
+                        switch (choice)
+                        {
+                            case 1:
                                 Buy_Weapon(page);
-                            else if (page == 2)
-                                Buy_Weapon(page);
-                            return;
-                        case 0:
-                            Lobby.InLobby();
-                            return;
-                        default:
-                            continue;
+                                return;
+                            case 2:
+                                Sale_Weapon();
+                                return;
+                            case 0:
+                                Lobby.InLobby();
+                                return;
+                            default:
+                                Console.WriteLine("올바른 숫자를 입력해주세요.");
+                                Console.ReadLine();
+                                break;
+                        }
                     }
                 }
             }
@@ -184,13 +190,21 @@ namespace DungeonMan.ShopSystem
                         ShowShop();
                         break;
                     case 2:
-                        playerInventory.ShowItems();
+                        playerInventory.EquipItems();
                         break;
                     case 0:
                         Lobby.InLobby();
                         break;
                 }
-            }
+            } 
+        }
+        public void Sale_Weapon()
+        {
+            Console.Clear();
+            Console.WriteLine($"현재 골드 : {GameLogic.chara.Gold}\n");
+            Console.WriteLine("어떠한 물건을 판매하시겠습니까?\n");
+
+           playerInventory.SaleItems(1);
         }
     }
 }

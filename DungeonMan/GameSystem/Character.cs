@@ -36,8 +36,8 @@ namespace DungeonMan.GameSystem
             else if (job == "도적")
             {
                 AttackPower = 20;
-                DefensePower = 7;
-                Hp = 18;
+                DefensePower = 9;
+                Hp = 80;
             }
         }
         public void ShowStats()
