@@ -3,36 +3,52 @@
   "WorkspaceRootPath": "C:\\Users\\thsus\\OneDrive\\\uBB38\uC11C\\GitHub\\DungeonMan\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{68649C06-AF22-4CEB-B3BA-30EC359BE967}|DungeonMan\\DungeonMan.csproj|c:\\users\\thsus\\onedrive\\\uBB38\uC11C\\github\\dungeonman\\dungeonman\\gamesystem\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{68649C06-AF22-4CEB-B3BA-30EC359BE967}|DungeonMan\\DungeonMan.csproj|solutionrelative:dungeonman\\gamesystem\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{68649C06-AF22-4CEB-B3BA-30EC359BE967}|DungeonMan\\DungeonMan.csproj|c:\\users\\thsus\\onedrive\\\uBB38\uC11C\\github\\dungeonman\\dungeonman\\gamesystem\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68649C06-AF22-4CEB-B3BA-30EC359BE967}|DungeonMan\\DungeonMan.csproj|solutionrelative:dungeonman\\gamesystem\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{68649C06-AF22-4CEB-B3BA-30EC359BE967}|DungeonMan\\DungeonMan.csproj|c:\\users\\thsus\\onedrive\\\uBB38\uC11C\\github\\dungeonman\\dungeonman\\gamesystem\\dungeon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{68649C06-AF22-4CEB-B3BA-30EC359BE967}|DungeonMan\\DungeonMan.csproj|solutionrelative:dungeonman\\gamesystem\\dungeon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{68649C06-AF22-4CEB-B3BA-30EC359BE967}|DungeonMan\\DungeonMan.csproj|c:\\users\\thsus\\onedrive\\\uBB38\uC11C\\github\\dungeonman\\dungeonman\\shopsystem\\shop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68649C06-AF22-4CEB-B3BA-30EC359BE967}|DungeonMan\\DungeonMan.csproj|solutionrelative:dungeonman\\shopsystem\\shop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68649C06-AF22-4CEB-B3BA-30EC359BE967}|DungeonMan\\DungeonMan.csproj|c:\\users\\thsus\\onedrive\\\uBB38\uC11C\\github\\dungeonman\\dungeonman\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68649C06-AF22-4CEB-B3BA-30EC359BE967}|DungeonMan\\DungeonMan.csproj|solutionrelative:dungeonman\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68649C06-AF22-4CEB-B3BA-30EC359BE967}|DungeonMan\\DungeonMan.csproj|c:\\users\\thsus\\onedrive\\\uBB38\uC11C\\github\\dungeonman\\dungeonman\\gamestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68649C06-AF22-4CEB-B3BA-30EC359BE967}|DungeonMan\\DungeonMan.csproj|solutionrelative:dungeonman\\gamestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68649C06-AF22-4CEB-B3BA-30EC359BE967}|DungeonMan\\DungeonMan.csproj|c:\\users\\thsus\\onedrive\\\uBB38\uC11C\\github\\dungeonman\\dungeonman\\gamesystem\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68649C06-AF22-4CEB-B3BA-30EC359BE967}|DungeonMan\\DungeonMan.csproj|solutionrelative:dungeonman\\gamesystem\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{68649C06-AF22-4CEB-B3BA-30EC359BE967}|DungeonMan\\DungeonMan.csproj|c:\\users\\thsus\\onedrive\\\uBB38\uC11C\\github\\dungeonman\\dungeonman\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{68649C06-AF22-4CEB-B3BA-30EC359BE967}|DungeonMan\\DungeonMan.csproj|solutionrelative:dungeonman\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{68649C06-AF22-4CEB-B3BA-30EC359BE967}|DungeonMan\\DungeonMan.csproj|c:\\users\\thsus\\onedrive\\\uBB38\uC11C\\github\\dungeonman\\dungeonman\\gamesystem\\lobby.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{68649C06-AF22-4CEB-B3BA-30EC359BE967}|DungeonMan\\DungeonMan.csproj|solutionrelative:dungeonman\\gamesystem\\lobby.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{68649C06-AF22-4CEB-B3BA-30EC359BE967}|DungeonMan\\DungeonMan.csproj|c:\\users\\thsus\\onedrive\\\uBB38\uC11C\\github\\dungeonman\\dungeonman\\gamesystem\\dungeon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68649C06-AF22-4CEB-B3BA-30EC359BE967}|DungeonMan\\DungeonMan.csproj|solutionrelative:dungeonman\\gamesystem\\dungeon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{68649C06-AF22-4CEB-B3BA-30EC359BE967}|DungeonMan\\DungeonMan.csproj|c:\\users\\thsus\\onedrive\\\uBB38\uC11C\\github\\dungeonman\\dungeonman\\gamesystem\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{68649C06-AF22-4CEB-B3BA-30EC359BE967}|DungeonMan\\DungeonMan.csproj|solutionrelative:dungeonman\\gamesystem\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{68649C06-AF22-4CEB-B3BA-30EC359BE967}|DungeonMan\\DungeonMan.csproj|c:\\users\\thsus\\onedrive\\\uBB38\uC11C\\github\\dungeonman\\dungeonman\\gamesystem\\healing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68649C06-AF22-4CEB-B3BA-30EC359BE967}|DungeonMan\\DungeonMan.csproj|solutionrelative:dungeonman\\gamesystem\\healing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{68649C06-AF22-4CEB-B3BA-30EC359BE967}|DungeonMan\\DungeonMan.csproj|c:\\users\\thsus\\onedrive\\\uBB38\uC11C\\github\\dungeonman\\dungeonman\\gamesystem\\gamelogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{68649C06-AF22-4CEB-B3BA-30EC359BE967}|DungeonMan\\DungeonMan.csproj|solutionrelative:dungeonman\\gamesystem\\gamelogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{68649C06-AF22-4CEB-B3BA-30EC359BE967}|DungeonMan\\DungeonMan.csproj|c:\\users\\thsus\\onedrive\\\uBB38\uC11C\\github\\dungeonman\\dungeonman\\saveload.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68649C06-AF22-4CEB-B3BA-30EC359BE967}|DungeonMan\\DungeonMan.csproj|solutionrelative:dungeonman\\saveload.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{68649C06-AF22-4CEB-B3BA-30EC359BE967}|DungeonMan\\DungeonMan.csproj|c:\\users\\thsus\\onedrive\\\uBB38\uC11C\\github\\dungeonman\\dungeonman\\data\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{68649C06-AF22-4CEB-B3BA-30EC359BE967}|DungeonMan\\DungeonMan.csproj|solutionrelative:dungeonman\\data\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{68649C06-AF22-4CEB-B3BA-30EC359BE967}|DungeonMan\\DungeonMan.csproj|c:\\users\\thsus\\onedrive\\\uBB38\uC11C\\github\\dungeonman\\dungeonman\\shopsystem\\shop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{68649C06-AF22-4CEB-B3BA-30EC359BE967}|DungeonMan\\DungeonMan.csproj|solutionrelative:dungeonman\\shopsystem\\shop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{68649C06-AF22-4CEB-B3BA-30EC359BE967}|DungeonMan\\DungeonMan.csproj|c:\\users\\thsus\\onedrive\\\uBB38\uC11C\\github\\dungeonman\\dungeonman\\gamesystem\\lobby.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68649C06-AF22-4CEB-B3BA-30EC359BE967}|DungeonMan\\DungeonMan.csproj|solutionrelative:dungeonman\\gamesystem\\lobby.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68649C06-AF22-4CEB-B3BA-30EC359BE967}|DungeonMan\\DungeonMan.csproj|c:\\users\\thsus\\onedrive\\\uBB38\uC11C\\github\\dungeonman\\dungeonman\\gamesystem\\gamelogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68649C06-AF22-4CEB-B3BA-30EC359BE967}|DungeonMan\\DungeonMan.csproj|solutionrelative:dungeonman\\gamesystem\\gamelogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,108 +58,160 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
+              "Title": "GameManager.cs",
+              "DocumentMoniker": "C:\\Users\\thsus\\OneDrive\\\uBB38\uC11C\\GitHub\\DungeonMan\\DungeonMan\\GameManager.cs",
+              "RelativeDocumentMoniker": "DungeonMan\\GameManager.cs",
+              "ToolTip": "C:\\Users\\thsus\\OneDrive\\\uBB38\uC11C\\GitHub\\DungeonMan\\DungeonMan\\GameManager.cs",
+              "RelativeToolTip": "DungeonMan\\GameManager.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAAACMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-18T02:43:13.579Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GameState.cs",
+              "DocumentMoniker": "C:\\Users\\thsus\\OneDrive\\\uBB38\uC11C\\GitHub\\DungeonMan\\DungeonMan\\GameState.cs",
+              "RelativeDocumentMoniker": "DungeonMan\\GameState.cs",
+              "ToolTip": "C:\\Users\\thsus\\OneDrive\\\uBB38\uC11C\\GitHub\\DungeonMan\\DungeonMan\\GameState.cs",
+              "RelativeToolTip": "DungeonMan\\GameState.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-18T02:38:57.402Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "SaveLoad.cs",
+              "DocumentMoniker": "C:\\Users\\thsus\\OneDrive\\\uBB38\uC11C\\GitHub\\DungeonMan\\DungeonMan\\SaveLoad.cs",
+              "RelativeDocumentMoniker": "DungeonMan\\SaveLoad.cs",
+              "ToolTip": "C:\\Users\\thsus\\OneDrive\\\uBB38\uC11C\\GitHub\\DungeonMan\\DungeonMan\\SaveLoad.cs",
+              "RelativeToolTip": "DungeonMan\\SaveLoad.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-18T02:39:57.187Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Healing.cs",
+              "DocumentMoniker": "C:\\Users\\thsus\\OneDrive\\\uBB38\uC11C\\GitHub\\DungeonMan\\DungeonMan\\GameSystem\\Healing.cs",
+              "RelativeDocumentMoniker": "DungeonMan\\GameSystem\\Healing.cs",
+              "ToolTip": "C:\\Users\\thsus\\OneDrive\\\uBB38\uC11C\\GitHub\\DungeonMan\\DungeonMan\\GameSystem\\Healing.cs",
+              "RelativeToolTip": "DungeonMan\\GameSystem\\Healing.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-18T00:42:19.205Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Dungeon.cs",
               "DocumentMoniker": "C:\\Users\\thsus\\OneDrive\\\uBB38\uC11C\\GitHub\\DungeonMan\\DungeonMan\\GameSystem\\Dungeon.cs",
               "RelativeDocumentMoniker": "DungeonMan\\GameSystem\\Dungeon.cs",
               "ToolTip": "C:\\Users\\thsus\\OneDrive\\\uBB38\uC11C\\GitHub\\DungeonMan\\DungeonMan\\GameSystem\\Dungeon.cs",
               "RelativeToolTip": "DungeonMan\\GameSystem\\Dungeon.cs",
-              "ViewState": "AQIAAB4BAAAAAAAAAAA+wAgBAAAwAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAA7AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-17T07:24:44.4Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 10,
               "Title": "Lobby.cs",
               "DocumentMoniker": "C:\\Users\\thsus\\OneDrive\\\uBB38\uC11C\\GitHub\\DungeonMan\\DungeonMan\\GameSystem\\Lobby.cs",
               "RelativeDocumentMoniker": "DungeonMan\\GameSystem\\Lobby.cs",
               "ToolTip": "C:\\Users\\thsus\\OneDrive\\\uBB38\uC11C\\GitHub\\DungeonMan\\DungeonMan\\GameSystem\\Lobby.cs",
               "RelativeToolTip": "DungeonMan\\GameSystem\\Lobby.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAAwDAAAAAlAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA4AAAALAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-16T05:29:51.341Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 11,
               "Title": "GameLogic.cs",
               "DocumentMoniker": "C:\\Users\\thsus\\OneDrive\\\uBB38\uC11C\\GitHub\\DungeonMan\\DungeonMan\\GameSystem\\GameLogic.cs",
               "RelativeDocumentMoniker": "DungeonMan\\GameSystem\\GameLogic.cs",
               "ToolTip": "C:\\Users\\thsus\\OneDrive\\\uBB38\uC11C\\GitHub\\DungeonMan\\DungeonMan\\GameSystem\\GameLogic.cs",
               "RelativeToolTip": "DungeonMan\\GameSystem\\GameLogic.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAEAAAAAAAAA",
+              "ViewState": "AQIAADIAAAAAAAAAAAAQwEcAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-16T05:16:46.634Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "Item.cs",
               "DocumentMoniker": "C:\\Users\\thsus\\OneDrive\\\uBB38\uC11C\\GitHub\\DungeonMan\\DungeonMan\\Data\\Item.cs",
               "RelativeDocumentMoniker": "DungeonMan\\Data\\Item.cs",
               "ToolTip": "C:\\Users\\thsus\\OneDrive\\\uBB38\uC11C\\GitHub\\DungeonMan\\DungeonMan\\Data\\Item.cs",
               "RelativeToolTip": "DungeonMan\\Data\\Item.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAywA4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-15T11:39:19.578Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "Inventory.cs",
               "DocumentMoniker": "C:\\Users\\thsus\\OneDrive\\\uBB38\uC11C\\GitHub\\DungeonMan\\DungeonMan\\GameSystem\\Inventory.cs",
               "RelativeDocumentMoniker": "DungeonMan\\GameSystem\\Inventory.cs",
               "ToolTip": "C:\\Users\\thsus\\OneDrive\\\uBB38\uC11C\\GitHub\\DungeonMan\\DungeonMan\\GameSystem\\Inventory.cs",
               "RelativeToolTip": "DungeonMan\\GameSystem\\Inventory.cs",
-              "ViewState": "AQIAABoAAAAAAAAAAAAQwM4AAAAVAAAA",
+              "ViewState": "AQIAAJkAAAAAAAAAAAAYwLcAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-15T11:38:36.977Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Character.cs",
-              "DocumentMoniker": "C:\\Users\\thsus\\OneDrive\\\uBB38\uC11C\\GitHub\\DungeonMan\\DungeonMan\\GameSystem\\Character.cs",
-              "RelativeDocumentMoniker": "DungeonMan\\GameSystem\\Character.cs",
-              "ToolTip": "C:\\Users\\thsus\\OneDrive\\\uBB38\uC11C\\GitHub\\DungeonMan\\DungeonMan\\GameSystem\\Character.cs",
-              "RelativeToolTip": "DungeonMan\\GameSystem\\Character.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAA1wCYAAAAgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-15T11:37:56.065Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 1,
               "Title": "Shop.cs",
               "DocumentMoniker": "C:\\Users\\thsus\\OneDrive\\\uBB38\uC11C\\GitHub\\DungeonMan\\DungeonMan\\ShopSystem\\Shop.cs",
               "RelativeDocumentMoniker": "DungeonMan\\ShopSystem\\Shop.cs",
               "ToolTip": "C:\\Users\\thsus\\OneDrive\\\uBB38\uC11C\\GitHub\\DungeonMan\\DungeonMan\\ShopSystem\\Shop.cs",
               "RelativeToolTip": "DungeonMan\\ShopSystem\\Shop.cs",
-              "ViewState": "AQIAAJAAAAAAAAAAAAAAAMAAAAAzAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAABMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-15T11:37:00.702Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
+              "Title": "Character.cs",
+              "DocumentMoniker": "C:\\Users\\thsus\\OneDrive\\\uBB38\uC11C\\GitHub\\DungeonMan\\DungeonMan\\GameSystem\\Character.cs",
+              "RelativeDocumentMoniker": "DungeonMan\\GameSystem\\Character.cs",
+              "ToolTip": "C:\\Users\\thsus\\OneDrive\\\uBB38\uC11C\\GitHub\\DungeonMan\\DungeonMan\\GameSystem\\Character.cs",
+              "RelativeToolTip": "DungeonMan\\GameSystem\\Character.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABMAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T11:37:56.065Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\thsus\\OneDrive\\\uBB38\uC11C\\GitHub\\DungeonMan\\DungeonMan\\Program.cs",
               "RelativeDocumentMoniker": "DungeonMan\\Program.cs",
               "ToolTip": "C:\\Users\\thsus\\OneDrive\\\uBB38\uC11C\\GitHub\\DungeonMan\\DungeonMan\\Program.cs",
               "RelativeToolTip": "DungeonMan\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAPAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAuwBoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-14T08:23:43.315Z",
               "EditorCaption": ""

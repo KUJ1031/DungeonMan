@@ -10,23 +10,25 @@ namespace DungeonMan.ShopSystem
 {
     public class Shop
     {
-        private Inventory playerInventory;
-        public List<Item> AllItems { get; private set; }
+        public Inventory playerInventory;
+        public List<Item> AllItems { get; private set; } = new List<Item>();
+
+        public Shop() { }
 
         public Shop(Inventory inventory)
         {
             this.playerInventory = inventory;
         }
 
-        Item item_01 = new Item("낡은 검", 2, ItemType.무기, "금방이라도 부러질 듯합니다.", "500", "모든 직업 이용 가능");
-        Item item_02 = new Item("청동 도끼", 5, ItemType.무기, "어디선가 사용됐던 흔적이 있습니다.", "800", "모든 직업 이용 가능");
-        Item item_03 = new Item("철검", 10, ItemType.무기, "꽤나 잘 만들어져 있습니다.", "1300", "[전사] 전용 장비");
-        Item item_04 = new Item("잘 벼려진 나이프", 10, ItemType.무기, "날카롭습니다.", "1300", "[도적] 전용 장비");
+        Item item_01 = new Item("낡은 검", 2, ItemType.무기, "- 금방이라도 부러질 듯합니다.", "500", "모든 직업 이용 가능");
+        Item item_02 = new Item("청동 도끼", 5, ItemType.무기, "- 어디선가 사용됐던 흔적이 있습니다.", "800", "모든 직업 이용 가능");
+        Item item_03 = new Item("철검", 10, ItemType.무기, "- 꽤나 잘 만들어져 있습니다.", "1300", "[전사] 전용 장비");
+        Item item_04 = new Item("잘 벼려진 나이프", 10, ItemType.무기, "- 굉장히 날카롭습니다.", "1300", "[도적] 전용 장비");
 
-        Item item_21 = new Item("수련자 갑옷", 5, ItemType.방어구, "썩 믿음직스럽지는 않습니다.", "500", "모든 직업 이용 가능");
-        Item item_22 = new Item("청동 갑옷", 8, ItemType.방어구, "약한 칼 정도는 우습습니다.", "800", "모든 직업 이용 가능");
-        Item item_23 = new Item("무쇠 갑옷", 12, ItemType.방어구, "매우 단단해 보입니다.", "1300", "[전사] 전용 장비");
-        Item item_24 = new Item("위장 갑옷", 12, ItemType.방어구, "위장에 탁월한 갑옷입니다.", "1300", "[도적] 전용 장비");
+        Item item_21 = new Item("수련자 갑옷", 5, ItemType.방어구, "- 썩 믿음직스럽지는 않습니다.", "500", "모든 직업 이용 가능");
+        Item item_22 = new Item("청동 갑옷", 8, ItemType.방어구, "- 약한 칼 정도는 우습습니다.", "800", "모든 직업 이용 가능");
+        Item item_23 = new Item("무쇠 갑옷", 12, ItemType.방어구, "- 무지 단단해 보입니다.", "1300", "[전사] 전용 장비");
+        Item item_24 = new Item("위장 갑옷", 12, ItemType.방어구, "- 위장에 탁월한 갑옷입니다.", "1300", "[도적] 전용 장비");
         public void ShowShop(int page = 1)
         {
             while (true)
@@ -35,8 +37,8 @@ namespace DungeonMan.ShopSystem
 
                 if (page == 1)
                 {
-                    Console.WriteLine($"------------------------------------현재 무기 상점 목록------------------------------------\n");
-
+                    Console.WriteLine($"------------------------------------현재 무기 상점 목록------------------------------------");
+                    Console.WriteLine("방향키 ← →로 상점 페이지 이동\n\n");
                     List<Item> itemList = new List<Item>() { item_01, item_02, item_03, item_04 };
                     int index = 1;
                     foreach (Item item in itemList)
@@ -54,7 +56,8 @@ namespace DungeonMan.ShopSystem
                 }
                 else if (page == 2)
                 {
-                    Console.WriteLine($"------------------------------------현재 방어구 상점 목록------------------------------------\n");
+                    Console.WriteLine("------------------------------------현재 방어구 상점 목록------------------------------------");
+                    Console.WriteLine("방향키 ← →로 상점 페이지 이동\n\n");
 
                     List<Item> itemList = new List<Item>() { item_21, item_22, item_23, item_24 };
                     int index = 1;
@@ -73,11 +76,11 @@ namespace DungeonMan.ShopSystem
                 }
 
                 Console.WriteLine($"현재 골드 : {GameLogic.chara.Gold}");
-                Console.WriteLine("\n방향키 ← →로 상점 페이지 이동");
+                
                 Console.WriteLine("1. 구매하기");
                 Console.WriteLine("2. 판매하기");
                 Console.WriteLine("0. 나가기");
-                Console.WriteLine("\n 숫자 입력 =>");
+                Console.Write("\n 숫자 입력 =>");
 
                 var key = Console.ReadKey(intercept: true); // 입력 표시 없이 키 읽음
 

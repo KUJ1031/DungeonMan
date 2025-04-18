@@ -11,9 +11,13 @@ namespace DungeonMan.GameSystem
     {
         public string Name { get; set; }
         public int Level { get; set; }
+
+        public int CurrentExp {  get; set; }
+        public int LevelupExp { get; set; }
         public int AttackPower { get; set; }
         public int DefensePower { get; set; }
-        public int Hp { get; set; }
+        public int CurrentHp { get; set; }
+        public int MaxHp { get; set; }
         public int Gold { get; set; }
         public string Job { get; set; }
 
@@ -25,19 +29,25 @@ namespace DungeonMan.GameSystem
             Name = name;
             Job = job;
             Level = 1;
+            CurrentExp = 0;
+            LevelupExp = 50;
             Gold = 10500;
 
             if (job == "전사")
             {
                 AttackPower = 10;
                 DefensePower = 15;
-                Hp = 100;
+                CurrentHp = 100;
+                MaxHp = 100;
+                MaxHp = 100;
             }
             else if (job == "도적")
             {
                 AttackPower = 20;
                 DefensePower = 9;
-                Hp = 80;
+                CurrentHp = 80;
+                MaxHp = 100;
+                MaxHp = 100;
             }
         }
         public void ShowStats()
@@ -47,6 +57,7 @@ namespace DungeonMan.GameSystem
             Console.WriteLine("");
             Console.WriteLine("이름 : " + Name);
             Console.WriteLine("Lv. " + Level);
+            Console.WriteLine($"Exp : {CurrentExp}/{LevelupExp}");
             Console.WriteLine("Chad. " + Job);
             string attackInfo = AttackPower.ToString();
             if (EquippedWeapon != null)
@@ -63,7 +74,7 @@ namespace DungeonMan.GameSystem
             }
             Console.WriteLine("공격력 : " + attackInfo);
             Console.WriteLine("방어력 : " + defenseInfo);
-            Console.WriteLine("체력 : " + Hp);
+            Console.WriteLine("체력 : " + CurrentHp + "/" + MaxHp);
             Console.WriteLine("골드 : " + Gold);
             Console.WriteLine("");
             Console.WriteLine("-------------------------------------------------");
@@ -87,6 +98,30 @@ namespace DungeonMan.GameSystem
             }
         }
 
+        public void AddExp(int amount)
+        {
+            CurrentExp += amount;
+            while (CurrentExp >= LevelupExp)
+            {
+                CurrentExp -= LevelupExp;
+                LevelUp();
+            }
+        }
+
+        public void LevelUp()
+        {
+            Level++;
+            LevelupExp = 50 * Level;
+
+            AttackPower += 5;
+            DefensePower += 3;
+            CurrentHp += 20;
+            MaxHp += 20;
+
+            Console.WriteLine($"레벨이 {Level}로 올랐습니다! 다음 레벨까지 필요한 경험치: {CurrentExp}/{LevelupExp}");
+        }
+
+       
 
     }
 }

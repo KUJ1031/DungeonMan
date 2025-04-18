@@ -9,6 +9,7 @@ namespace DungeonMan.Data
 {
     public enum ItemType { 무기, 방어구 }
 
+    [Serializable]
     public class Item
     {
 
@@ -19,8 +20,8 @@ namespace DungeonMan.Data
         public string Gold { get; set; }
         public string AvailableJob { get; set; }
 
-        public bool IsPurchased { get; set; } = false;
-
+        public bool IsPurchased { get; set; }
+        public Item() { }
 
         public Item(string name, int attack, ItemType type, string explain, string gold, string availablejob)
         {
@@ -30,6 +31,7 @@ namespace DungeonMan.Data
             Explain = explain;
             Gold = gold;
             AvailableJob = availablejob;
+            IsPurchased = false;
         }
     }
 }

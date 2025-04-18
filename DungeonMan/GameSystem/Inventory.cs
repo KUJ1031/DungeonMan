@@ -9,13 +9,13 @@ namespace DungeonMan.GameSystem
 {
     public class Inventory
     {
-        private List<Item> items = new List<Item>();
+        public List<Item> items { get; set; }= new List<Item>();
+        public string equippedTag;
 
         public void AddItem(Item item)
         {
             items.Add(item);
         }
-
         public void RemoveItem(Item item)
         {
             items.Remove(item);
@@ -25,6 +25,7 @@ namespace DungeonMan.GameSystem
 
             Console.Clear();
             Console.WriteLine($"----------------현재 아이템 목록----------------");
+            
             Console.WriteLine("");
             if (items.Count == 0)
             {
@@ -78,7 +79,7 @@ namespace DungeonMan.GameSystem
             {
                 Console.Clear();
                 Console.WriteLine("장착할 아이템을 선택해주세요.");
-                Console.WriteLine("");
+                Console.WriteLine("방향키 ← →로 아이템 페이지 이동\n");
 
                 List<Item> weaponItems = new List<Item>();
                 List<Item> sheildItems = new List<Item>();
@@ -102,7 +103,9 @@ namespace DungeonMan.GameSystem
 
                     foreach (Item item in weaponItems)
                     {
-                        string equippedTag = (GameLogic.chara.EquippedWeapon == item) ? "[E] " : "";
+                        equippedTag = (GameLogic.chara.EquippedWeapon != null &&
+     GameLogic.chara.EquippedWeapon.Name == item.Name &&
+     GameLogic.chara.EquippedWeapon.Type == item.Type) ? "[E] " : "";
                         Console.WriteLine($"({count}) {equippedTag}[{item.Type}] {item.Name} | 공격력: {item.Power} | {item.Explain} | {item.AvailableJob}");
                         count++;
                     }
@@ -114,11 +117,14 @@ namespace DungeonMan.GameSystem
                     int count = 1;
                     foreach (Item item in sheildItems)
                     {
-                        string equippedTag = (GameLogic.chara.EquippedArmor == item) ? "[E] " : "";
+                        equippedTag = (GameLogic.chara.EquippedArmor != null &&
+     GameLogic.chara.EquippedArmor.Name == item.Name &&
+     GameLogic.chara.EquippedArmor.Type == item.Type) ? "[E] " : "";
                         Console.WriteLine($"({count}) {equippedTag}[{item.Type}] {item.Name} | 방어력: {item.Power} | {item.Explain} | {item.AvailableJob}");
                         count++;
                     }
                 }
+               
                 while (Console.KeyAvailable)
                 {
                     Console.ReadKey(true);
@@ -137,73 +143,91 @@ namespace DungeonMan.GameSystem
                 }
                 else if (char.IsDigit(key.KeyChar))
                 {
-                    int selected = int.Parse(key.KeyChar.ToString());
+                    Console.Write(key.KeyChar);
+                    string remainingInput = Console.ReadLine();
+                    string fullInput = key.KeyChar + remainingInput;
 
-                    if (page == 1 && selected > 0 && selected <= weaponItems.Count)
+                    if (int.TryParse(fullInput, out int selected))
                     {
-                        Item selectedItem = weaponItems[selected - 1];
-
-                        if (GameLogic.chara.EquippedWeapon == selectedItem)
+                        if (page == 1 && selected > 0 && selected <= weaponItems.Count)
                         {
-                            GameLogic.chara.AttackPower -= selectedItem.Power;
-                            GameLogic.chara.EquippedWeapon = null;
-                            Console.WriteLine($"\n[{selectedItem.Name}] 장착 해제되었습니다!");
+                            Item selectedItem = weaponItems[selected - 1];
+
+                            if (equippedTag == "[E] ")
+                            {
+                                GameLogic.chara.AttackPower -= selectedItem.Power;
+                                GameLogic.chara.EquippedWeapon = null;
+                                Console.WriteLine($"\n[{selectedItem.Name}] 장착 해제되었습니다!");
+                            }
+
+                            else
+                            {
+                                if (GameLogic.chara.EquippedWeapon != null)
+                                    GameLogic.chara.AttackPower -= GameLogic.chara.EquippedWeapon.Power;
+
+                                GameLogic.chara.EquippedWeapon = selectedItem;
+                                GameLogic.chara.AttackPower += selectedItem.Power;
+                                Console.WriteLine($"\n[{selectedItem.Name}] 장착 완료했습니다!");
+                                Console.WriteLine($"공격력: {GameLogic.chara.AttackPower} ({selectedItem.Name} +{selectedItem.Power})");
+                            }
+                        }
+                        else if (page == 2 && selected > 0 && selected <= sheildItems.Count)
+                        {
+                            Item selectedItem = sheildItems[selected - 1];
+
+                            if (equippedTag == "[E] ")
+                            {
+                                GameLogic.chara.DefensePower -= selectedItem.Power;
+                                GameLogic.chara.EquippedArmor = null;
+                                Console.WriteLine($"\n[{selectedItem.Name}] 장착 해제되었습니다!");
+                            }
+                            else
+                            {
+                                if (GameLogic.chara.EquippedWeapon != null)
+    {
+        GameLogic.chara.AttackPower -= GameLogic.chara.EquippedWeapon.Power;
+        Console.WriteLine($"[{GameLogic.chara.EquippedWeapon.Name}] 장착 해제되었습니다!");
+    }
+
+                                GameLogic.chara.EquippedArmor = selectedItem;
+                                GameLogic.chara.DefensePower += selectedItem.Power;
+                                Console.WriteLine($"\n[{selectedItem.Name}] 장착 완료했습니다!");
+                                Console.WriteLine($"방어력: {GameLogic.chara.DefensePower} ({selectedItem.Name} +{selectedItem.Power})");
+                            }
                         }
                         else
                         {
-                            if (GameLogic.chara.EquippedWeapon != null)
-                                GameLogic.chara.AttackPower -= GameLogic.chara.EquippedWeapon.Power;
-
-                            GameLogic.chara.EquippedWeapon = selectedItem;
-                            GameLogic.chara.AttackPower += selectedItem.Power;
-                            Console.WriteLine($"\n[{selectedItem.Name}] 장착 완료했습니다!");
-                            Console.WriteLine($"공격력: {GameLogic.chara.AttackPower} ({selectedItem.Name} +{selectedItem.Power})");
+                            Console.WriteLine("잘못된 번호입니다.");
+                            Console.ReadLine();
+                            EquipItems();
+                            return;
                         }
-                    }
-                    else if (page == 2 && selected > 0 && selected <= sheildItems.Count)
-                    {
-                        Item selectedItem = sheildItems[selected - 1];
 
-                        if (GameLogic.chara.EquippedArmor == selectedItem)
-                        {
-                            GameLogic.chara.DefensePower -= selectedItem.Power;
-                            GameLogic.chara.EquippedArmor = null;
-                            Console.WriteLine($"\n[{selectedItem.Name}] 장착 해제되었습니다!");
-                        }
-                        else
-                        {
-                            if (GameLogic.chara.EquippedArmor != null)
-                                GameLogic.chara.DefensePower -= GameLogic.chara.EquippedArmor.Power;
+                        Console.WriteLine("");
+                        Console.WriteLine("1. 장착 관리");
+                        Console.WriteLine("0. 나가기");
 
-                            GameLogic.chara.EquippedArmor = selectedItem;
-                            GameLogic.chara.DefensePower += selectedItem.Power;
-                            Console.WriteLine($"\n[{selectedItem.Name}] 장착 완료했습니다!");
-                            Console.WriteLine($"방어력: {GameLogic.chara.DefensePower} ({selectedItem.Name} +{selectedItem.Power})");
+                        Console.Write(">> ");
+                        string input = Console.ReadLine();
+                        switch (input)
+                        {
+                            case "1":
+                                EquipItems();
+                                break;
+                            case "0":
+                                Lobby.InLobby();
+                                break;
+                            default:
+                                Console.WriteLine("잘못된 버튼을 눌렀습니다.");
+                                EquipItems();
+                                break;
                         }
                     }
                     else
                     {
-                        Console.WriteLine("잘못된 번호입니다.");
+                        Console.WriteLine("올바른 숫자를 입력해주세요.");
+                        Console.ReadLine();
                         EquipItems();
-                        return;
-                    }
-
-                    Console.WriteLine("");
-                    Console.WriteLine("1. 장착 관리");
-                    Console.WriteLine("0. 나가기");
-                    int i = int.Parse(Console.ReadLine());
-                    switch (i)
-                    {
-                        case 1:
-                            EquipItems();
-                            break;
-                        case 0:
-                            Lobby.InLobby();
-                            break;
-                        default:
-                            Console.WriteLine("잘못된 버튼을 눌렀습니다.");
-                            EquipItems();
-                            break;
                     }
                 }
 
@@ -345,6 +369,5 @@ namespace DungeonMan.GameSystem
 
             }
         }
-
     }
     }

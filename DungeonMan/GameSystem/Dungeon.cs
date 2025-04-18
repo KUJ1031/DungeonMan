@@ -16,13 +16,15 @@ namespace DungeonMan.GameSystem
     public delegate void EnemySlimeAttackHanler(int damage);
     public delegate void EnemyGoblinAttackHanler(int damage);
     public delegate void EnemyDevilttackHanler(int damage);
-    internal class Dungeon
+    public class Dungeon
     {
         EnterDungeon dungeon = new EnterDungeon();
         Slime slime = new Slime();
         Goblin goblin = new Goblin();
         Devil devil = new Devil();
         static Player player = Player.Instance;
+
+        int turn = 1;
 
         public class Player
         {
@@ -34,7 +36,7 @@ namespace DungeonMan.GameSystem
 
             public void ClearEvents()
             {
-                OnAttack = null; // 클래스 내부에서는 가능함!
+                OnAttack = null;
             }
 
             // 인스턴스를 가져오는 public static 속성
@@ -59,11 +61,12 @@ namespace DungeonMan.GameSystem
             {
                 Console.WriteLine($"이름 : {GameLogic.chara.Name}");
                 Console.WriteLine($"직업 : {GameLogic.chara.Job}");
-                Console.WriteLine($"체력 : {GameLogic.chara.Hp}");
+                Console.WriteLine($"레벨 : {GameLogic.chara.Level}");
+                Console.WriteLine($"경험치 : {GameLogic.chara.CurrentExp}/{GameLogic.chara.LevelupExp}");
+                Console.WriteLine($"체력 : {GameLogic.chara.CurrentHp}/{GameLogic.chara.MaxHp}");
                 Console.WriteLine($"공격력 : {GameLogic.chara.AttackPower}");
                 Console.WriteLine($"방어력 : {GameLogic.chara.DefensePower}");
                 Console.WriteLine($"골드 : {GameLogic.chara.Gold}");
-                Console.WriteLine($"직업 : {GameLogic.chara.Job}");
             }
 
             public void InitEnemy(string enemy)
@@ -81,15 +84,15 @@ namespace DungeonMan.GameSystem
             public void HandleDamage(int damage)
             {
                 int realDamage = Math.Max(0, damage - GameLogic.chara.DefensePower);
-                GameLogic.chara.Hp -= realDamage;
-                if (GameLogic.chara.Hp <= 0)
+                GameLogic.chara.CurrentHp -= realDamage;
+                if (GameLogic.chara.CurrentHp <= 0)
                 {
                     Console.WriteLine("사망했다...");
                     GameOver();
                 }
                 else
                 {
-                    Console.WriteLine($"{GameLogic.chara.Name}에게 {damage} 데미지, 그러나 {GameLogic.chara.Name}의 방어력 {GameLogic.chara.DefensePower}만큼 데미지를 경감!"); Thread.Sleep(2000);
+                    Console.WriteLine($"{GameLogic.chara.Name}에게 {damage} 데미지, 그러나 {GameLogic.chara.Name}의 방어력 {GameLogic.chara.DefensePower}만큼 데미지를 경감!"); Thread.Sleep(1000);
                     Console.WriteLine($"총 {GameLogic.chara.Name}에게 {realDamage}의 데미지!");
                 }
             }
@@ -134,8 +137,9 @@ namespace DungeonMan.GameSystem
            
             public bool isDie = false;
             public int dropGold = 1000;
+            public int dropExp = 50;
 
-            public bool isFighted_Slime = false;
+            public bool isFighted_Slime;
 
             public void Attack(int power)
             {
@@ -172,9 +176,13 @@ namespace DungeonMan.GameSystem
                 isDie = true;
                 Console.WriteLine($"{Name}에게서 승리!\n");
                 GameLogic.chara.Gold += dropGold;
+                
                 Console.WriteLine($"보상 : {dropGold}골드 획득! 총 소지 골드 : {GameLogic.chara.Gold}");
+                Console.WriteLine($"보상 : {dropExp}경험치 획득!");
+                GameLogic.chara.AddExp(dropExp);
 
                 hp = 30;
+                isFighted_Slime = false;
                 return isDie;
                 
             }
@@ -185,6 +193,7 @@ namespace DungeonMan.GameSystem
             public event EnemyGoblinAttackHanler OnAttack;
             public string Name = "고블린";
             public int hp = 50;
+            public int dropExp = 100;
 
             static Random random = new Random();
             public bool isDie = false;
@@ -212,7 +221,6 @@ namespace DungeonMan.GameSystem
 
                 if (hp <= 0)
                 {
-
                     IsDie();
                 }
                 else
@@ -231,6 +239,10 @@ namespace DungeonMan.GameSystem
                 Console.WriteLine($"{Name}에게서 승리!\n");
                 GameLogic.chara.Gold += dropGold;
                 Console.WriteLine($"보상 : {dropGold}골드 획득! 총 소지 골드 : {GameLogic.chara.Gold}");
+                Console.WriteLine($"보상 : {dropExp}경험치 획득!");
+                GameLogic.chara.AddExp(dropExp);
+
+                isFighted_Goblin = false;
 
                 hp = 50;
                 return isDie;
@@ -244,10 +256,9 @@ namespace DungeonMan.GameSystem
             public int hp = 100;
 
             static Random random = new Random();
-
             public bool isDie = false;
-
             public int dropGold = 5000;
+            public int dropExp = 200;
 
             public bool isFighted_Devil = false;
 
@@ -290,6 +301,10 @@ namespace DungeonMan.GameSystem
                 Console.WriteLine($"{Name}에게서 승리!\n");
                 GameLogic.chara.Gold += dropGold;
                 Console.WriteLine($"보상 : {dropGold}골드 획득! 총 소지 골드 : {GameLogic.chara.Gold}");
+                Console.WriteLine($"보상 : {dropExp}경험치 획득!");
+                GameLogic.chara.AddExp(dropExp);
+
+                isFighted_Devil = false;
 
                 hp = 100;
                 return isDie;
@@ -389,9 +404,10 @@ namespace DungeonMan.GameSystem
             }
         }
 
+        
         public void FightEnemy()
         {
-            int turn = 1;
+            
             Console.Write($"\n[현재 {turn}턴]");
             Console.WriteLine($"\n1.공격하기 2. 스테이터스 3. 상대 주시");
             Console.Write($"\n어떻게 할까? >> ");
@@ -418,9 +434,9 @@ namespace DungeonMan.GameSystem
             }
            
             else Console.WriteLine("\n그런 행동은 없는데용...");
-
-            Thread.Sleep(1000);
             turn++;
+            Thread.Sleep(1000);
+            
         }
 
         public static void GameOver()
@@ -428,7 +444,11 @@ namespace DungeonMan.GameSystem
             Console.WriteLine("\n[Game Over] 당신은 죽었습니다...\n");
 
             Console.WriteLine("지금까지 모은 골드: " + GameLogic.chara.Gold);
-            Console.WriteLine("던전 탈출 실패...");
+
+            string[] deathMan = { "정말, 이 방법이 최선이었을까..?", "운이 없었어... 그래, 운이 없었던거야...", "왜 그런 선택을 했을까. 왜..." };
+            Random random = new Random();
+            int index = random.Next(deathMan.Length); // 0부터 greetings.Length - 1 사이의 정수 반환
+            Console.WriteLine(deathMan[index]);
 
             Console.WriteLine("\n0. 종료하기");
             Console.WriteLine("1. 처음부터 다시 시작");
